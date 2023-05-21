@@ -35,6 +35,10 @@ dependencies {
 	implementation group: 'org.springdoc', name: 'springdoc-openapi-security', version: '1.7.0'
 	implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.1.1'
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mail'
+	// https://mvnrepository.com/artifact/com.zdawn/jwt-token
+	implementation group: 'com.zdawn', name: 'jwt-token', version: '1.2.3'
+	implementation 'org.liquibase:liquibase-core'
+
 }
 
 tasks.named('test') {

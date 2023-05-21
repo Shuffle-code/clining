@@ -25,10 +25,10 @@ spring:
     generate-ddl: false
 
 
+  liquibase:
+    change-log: 'changelog/db.changelog-master.xml'
+    enabled: true
 
-  #  liquibase:
-  #    change-log: 'db/changelog/db.changelog-master.xml'
-  #    enabled: true
 
 #    show-actuator: true
 
@@ -47,4 +47,7 @@ server:
 springdoc:
   show-login-endpoint: true
 
+jwt.token:
+  expired: 86_400_000
+  secret: 'gbsecret'
 

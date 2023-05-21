@@ -3,6 +3,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -43,6 +45,13 @@ public class JpaUserDetailService implements UserDetailsService, UserService {
     private final JanitorImageDao janitorImageDao;
     private final JanitorService janitorService;
 //    private final ParticipantMapper participantMapper;
+
+//    @Autowired
+//    @Lazy
+//    public void setUserService(JpaUserDetailService jpaUserDetailService){
+//        this.userSevice = JpaUserDetailService;
+//    }
+
 
     @Override
     @Transactional

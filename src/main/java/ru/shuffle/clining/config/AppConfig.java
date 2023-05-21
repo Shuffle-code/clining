@@ -9,6 +9,7 @@ import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import ru.shuffle.clining.security.jwt.JwtTokenFilter;
 
 import java.util.Optional;
 @Configuration
@@ -21,6 +22,7 @@ public class AppConfig {
                 .filter(Authentication::isAuthenticated)
                 .map(Authentication::getName);
     }
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
